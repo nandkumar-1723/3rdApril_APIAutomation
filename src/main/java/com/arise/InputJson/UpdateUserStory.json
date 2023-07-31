@@ -1,0 +1,11 @@
+{
+  "fields": {
+    "project": {
+      "key": "AM"
+    },
+    "summary": "Updating a user story from the json file",
+    "issuetype": {
+      "name": "Story"
+    }
+  }
+}
