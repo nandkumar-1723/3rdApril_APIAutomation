@@ -5,7 +5,7 @@
     },
     "summary": "Adding a user story from the json file",
     "issuetype": {
-      "name": "Story"
+      "name": "Provide issue type"
     }
   }
 }

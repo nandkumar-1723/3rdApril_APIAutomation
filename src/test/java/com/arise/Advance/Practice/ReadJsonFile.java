@@ -1,4 +1,4 @@
-package com.arise.Advance;
+package com.arise.Advance.Practice;
 
 import org.json.simple.parser.*;
 
