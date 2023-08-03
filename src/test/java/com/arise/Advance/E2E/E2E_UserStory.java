@@ -9,6 +9,7 @@ import org.json.simple.parser.*;
 import org.testng.annotations.*;
 
 import java.io.*;
+import java.util.*;
 
 /**
  * @author Nandkumar Babar
@@ -20,9 +21,8 @@ public class E2E_UserStory {
 
     @Test(priority = 1)
     public void loginToJira() throws IOException, ParseException {
-
         String reqBody = ReadInputs.readJsonInputs("src/main/java/com/arise/InputJson/loginReqBody.json");
-        Response response = RestAssured.given().baseUri("http://localhost:9009").body(reqBody).contentType(ContentType.JSON)
+        Response response = RestAssured.given().baseUri(ReadPropertiesFile.readProperties("URL")).body(reqBody).contentType(ContentType.JSON)
                 .when().post("/rest/auth/1/session")
                 .then().log().body().extract().response();
 
@@ -39,7 +39,7 @@ public class E2E_UserStory {
         JSONObject updatedRB = new JSONObject(requestBody);
         updatedRB.getJSONObject("fields").getJSONObject("issuetype").put("name","Story");
 
-        Response response = RestAssured.given().baseUri("http://localhost:9009").body(updatedRB.toString()).contentType(ContentType.JSON).header("Cookie", cookieValue)
+        Response response = RestAssured.given().baseUri(ReadPropertiesFile.readProperties("URL")).body(updatedRB.toString()).contentType(ContentType.JSON).header("Cookie", cookieValue)
                 .when().post("/rest/api/2/issue")
                 .then().log().body().extract().response();
 
