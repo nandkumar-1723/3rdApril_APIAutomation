@@ -1,4 +1,4 @@
-package com.arise.Advance.Practice;
+package com.arise.C_Practice;
 
 import java.io.*;
 import java.util.*;

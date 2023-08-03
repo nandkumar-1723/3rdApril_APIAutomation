@@ -1,4 +1,4 @@
-package com.arise.Standard;
+package com.arise.B_Standard;
 
 import io.restassured.*;
 import io.restassured.http.*;

@@ -1,4 +1,4 @@
-package com.arise.Advance.E2E;
+package com.arise.D_Advance;
 
 import com.arise.Utils.*;
 import io.restassured.*;
